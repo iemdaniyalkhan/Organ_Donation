@@ -1,0 +1,18 @@
+{% extends "blog/base2.html" %}
+
+    {% block content%}
+
+    
+{% if messages %}
+        {% for message in messages %}
+         {% if message.tags %}  <script>alert("{{ message }}")</script> {% endif %}
+
+        {% endfor %}
+
+    {% endif %}
+
+    <div style="background: url('/media/img/images/organ.jpg');background-repeat:no-repeat;background-size: cover;color: black;height:750px;"></div>
+	
+</div>
+
+    {% endblock%}

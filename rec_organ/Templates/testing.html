@@ -1,0 +1,98 @@
+
+ {% extends 'base.html'%}
+
+
+
+
+ {% block content %}
+ <div id="" style="">
+ 
+ 
+ {% if messages %}
+         {% for message in messages %}
+          {% if message.tags %}  <script>alert("{{ message }}")</script> {% endif %}
+ 
+         {% endfor %}
+ 
+     {% endif %}
+     
+ 
+ 
+ 
+        
+ 
+ 
+ 
+ <div class="col-md-12 " style="margin-top: 4%;margin-bottom: 3%">
+         <br>
+         <form id="searchform" action="{% url 'searchs' %}" method="get">
+            <input type="text" name="q" type="text" value="{{ request.GET.q }}" placeholder="Search Here..." />
+            <button type="button" onclick="searchform.submit()" class=" text-white my-color btn-primary">GO</button>
+        </form>
+ 
+         <center>
+             <div class="col-sm-3"  style="margin-left: 500px"><h2 style="border-color: #2a5868">VIEW PRODUCTS </h2>
+             </div>
+         </center>
+     </div>
+     {% for post in organ %}
+
+     <div id="MyProducts table-responsive"  style="height: 400px;margin-top: 3%">
+        <table class="table table-striped table-bordered table-sm" style="margin-top: 30px;" >  
+        <thead class="thead-dark" style="background-color: #2a5868;color: white">  
+        <tr>  
+            <th>ORGAN NAME </th>
+            <th>LOCATION </th>
+            <th>DONOR NAME </th>
+            <th>ORGAN PURCHASED </th>
+            <th>USER </th>
+            <th>STATUS </th>
+            <th>ORGAN PURCHASED </th>
+            <th>USER </th>
+            <th>STATUS </th>
+            <th>ORGAN PURCHASED </th>
+            <th>USER </th>
+            <th>STATUS </th>
+            
+       
+        </tr>  
+        </thead>  
+        <tbody style="background-color: white;color: black;height: 300px">
+
+     
+      
+     <tr>   
+ 
+        <td>{{post.donor_name}}</td>
+        <td>{{post.name}}</td>
+        <td>{{post.name}}</td>
+        
+        
+
+
+        
+        
+        
+                    
+    </tr> 
+         
+    
+      
+         
+    {% endfor %}
+</tbody>  
+</table>
+</div>
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ {% endblock %}
+ 

@@ -1,0 +1,12 @@
+
+{% block content%}
+{% if user_item %}
+
+{% for or in user_item %}
+
+
+<img src="/media/{{or.Image1}}"  style="height: 900px;width: 900px"></img>
+
+{% endfor %}
+{% endif %}
+{% endblock%}

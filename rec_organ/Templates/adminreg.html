@@ -1,0 +1,111 @@
+{% extends 'base.html'%}
+{% block content%}
+
+
+
+
+
+<!-- Registration start   -->
+
+ <div style="background: url('/media/Bg.jpg');background-repeat:no-repeat;background-size: cover;color: black;height:750px;">
+<div style="height: 613px">
+  
+
+
+
+<div class="container-fluid">
+
+<div class="col-md-12 ">
+{% if messages %}
+    {% for message in messages %}
+     {% if message.tags %}  <script>alert("{{ message }}")</script> {% endif %}
+
+    {% endfor %}
+
+{% endif %}
+<div style="background: url('/media/img/images/organ.jpg');background-repeat:no-repeat;background-size: cover;color: black;height:750px;">
+  <div style="height: 593px;">
+
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto" style="margin-left: 30%;margin-top: 10%;;">
+          <div class="card card-signin my-5">
+            <div class="card-body" style="background-color: grey;padding:12px">
+              <hr class="my-4">
+              <h3 class="card-title text-center" style="color:white">User Register</h3>
+
+<form class="form-horizontal" action='/adminreg/' enctype="multipart/form-data" method="POST" id="form1"> 
+{% csrf_token %}
+
+
+
+
+
+
+  <div class="form-label-group">
+      
+        <label for="first_name" style="color: white;font-weight: bold;">Username</label>
+<input type="text" name="doc_name" id="doc_name"  placeholder="name" class="form-control ">
+      </div>
+      
+      <div class="form-label-group">
+        <label style="color: white"  for="validationTooltip02">Password</label>
+        <input type="Password" class="form-control" name="doc_qua" id="doc_qua"  placeholder="Password" value="" >
+      </div>
+      <div class="form-label-group">
+        <label style="color: white"  for="validationTooltip02">Adhar Number</label>
+        <input type="number" class="form-control" name="adhar" id="adhar"  placeholder="adhar number" value="" >
+      </div>
+      
+      <div class="form-label-group"> 
+        <label for="email"  style="color: white;font-weight: bold;">Prescription photo</label>
+  <input type="file" name="abc" id="abc" class="form-control ">
+</div>
+
+<div class="form-label-group"> 
+  <label for="email"  style="color: white;font-weight: bold;">Declaration video</label>
+<input type="file" name="abcd" id="abcd" class="form-control ">
+</div>
+
+      
+
+       
+
+
+
+     <br>
+
+
+  <div class="col-md-12  text-center" style="margin-top: 4px">
+
+  <input type="submit" class="btn btn-success" name="" value="Register">
+  
+  <br>
+  
+
+
+
+
+</div>
+<br><br>
+
+</form>
+<div class="col-md-12 divsign">
+<div class="col-md-8 paddn">
+<br><br>
+</div>
+
+</div>
+
+</div>
+<br><br>
+</div>
+</div>
+
+
+
+
+
+{% endblock%}
+
